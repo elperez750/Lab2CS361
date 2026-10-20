@@ -26,11 +26,20 @@ int main(void) {
 
     double a;
     double b;
+    char space1;
+    char space2;
     char operator;
+    char response[20];
 
 
-    int matched = scanf("%lf %c %lf", &a, &operator, &b);
+    int matched = scanf("%lf%c%c%c%lf", &a, &space1, &operator, &space2, &b);
 
+    if (matched ==5 && space1 == ' ' && space2 == ' ') {
+        printf("Valid!\n");
+    }
+    else {
+        printf("Invalid\n");
+    }
 
 
     printf("%f\n", a);
